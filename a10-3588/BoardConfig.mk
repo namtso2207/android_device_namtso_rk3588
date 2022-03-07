@@ -29,11 +29,11 @@ BOARD_LIGHT_SENSOR_SUPPORT := true
 
 ifeq ($(strip $(BOARD_USES_AB_IMAGE)), true)
     include device/namtso/common/BoardConfig_AB.mk
-    TARGET_RECOVERY_FSTAB := device/namtso/rk3588/rk3588_t/recovery.fstab_AB
+    TARGET_RECOVERY_FSTAB := device/namtso/rk3588/a10-3588/recovery.fstab_AB
 endif
 
-PRODUCT_UBOOT_CONFIG := rk3588
-PRODUCT_KERNEL_DTS := rk3588-evb1-lp4-v10
+PRODUCT_UBOOT_CONFIG := a10-3588
+PRODUCT_KERNEL_DTS := rk3588-namtso-a10-3588
 BOARD_GSENSOR_MXC6655XA_SUPPORT := true
 BOARD_CAMERA_SUPPORT_EXT := true
 BOARD_HS_ETHERNET := true
