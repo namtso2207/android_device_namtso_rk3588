@@ -18,11 +18,11 @@
 PRODUCT_SHIPPING_API_LEVEL := 33
 PRODUCT_DTBO_TEMPLATE := $(LOCAL_PATH)/dt-overlay.in
 
-include device/rockchip/common/build/rockchip/DynamicPartitions.mk
-include device/rockchip/rk3588/a10-3588/BoardConfig.mk
-include device/rockchip/common/BoardConfig.mk
-$(call inherit-product, device/rockchip/rk3588/device.mk)
-$(call inherit-product, device/rockchip/common/device.mk)
+include device/namtso/common/build/rockchip/DynamicPartitions.mk
+include device/namtso/rk3588/a10-3588/BoardConfig.mk
+include device/namtso/common/BoardConfig.mk
+$(call inherit-product, device/namtso/rk3588/device.mk)
+$(call inherit-product, device/namtso/common/device.mk)
 $(call inherit-product, frameworks/native/build/tablet-10in-xhdpi-2048-dalvik-heap.mk)
 
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/../overlay
