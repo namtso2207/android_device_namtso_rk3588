@@ -32,6 +32,7 @@ ifeq ($(strip $(BOARD_USES_AB_IMAGE)), true)
     TARGET_RECOVERY_FSTAB := device/namtso/rk3588/a10-3588/recovery.fstab_AB
 endif
 
+PRODUCT_KERNEL_CONFIG += pcie_wifi.config
 PRODUCT_UBOOT_CONFIG := a10-3588
 PRODUCT_KERNEL_DTS := rk3588-namtso-a10-3588
 BOARD_GSENSOR_MXC6655XA_SUPPORT := true
