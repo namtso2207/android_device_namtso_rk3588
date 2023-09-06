@@ -35,6 +35,12 @@ PRODUCT_BRAND := rockchip
 PRODUCT_MODEL := Edge2
 PRODUCT_MANUFACTURER := Namtso
 PRODUCT_AAPT_PREF_CONFIG := mdpi
+
+$(shell python device/namtso/rk3588/auto_generator.py preinstall)
+-include device/namtso/rk3588/preinstall/preinstall.mk
+PRODUCT_COPY_FILES += \
+    device/namtso/rk3588/preinstall/preinstall.sh:system/bin/preinstall.sh
+
 #
 ## add Rockchip properties
 #
