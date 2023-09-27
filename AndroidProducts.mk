@@ -15,8 +15,8 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/a10-3588/a10-3588.mk
+    $(LOCAL_DIR)/a10_3588/a10_3588.mk
 
 COMMON_LUNCH_CHOICES := \
-    a10-3588-userdebug \
-    a10-3588-user
+    a10_3588-userdebug \
+    a10_3588-user

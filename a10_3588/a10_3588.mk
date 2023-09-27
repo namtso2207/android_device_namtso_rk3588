@@ -19,7 +19,7 @@ PRODUCT_SHIPPING_API_LEVEL := 33
 PRODUCT_DTBO_TEMPLATE := $(LOCAL_PATH)/dt-overlay.in
 
 include device/namtso/common/build/rockchip/DynamicPartitions.mk
-include device/namtso/rk3588/a10-3588/BoardConfig.mk
+include device/namtso/rk3588/a10_3588/BoardConfig.mk
 include device/namtso/common/BoardConfig.mk
 $(call inherit-product, device/namtso/rk3588/device.mk)
 $(call inherit-product, device/namtso/common/device.mk)
@@ -29,10 +29,10 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/../overlay
 
 PRODUCT_CHARACTERISTICS := tablet
 
-PRODUCT_NAME := a10-3588
-PRODUCT_DEVICE := a10-3588
+PRODUCT_NAME := a10_3588
+PRODUCT_DEVICE := a10_3588
 PRODUCT_BRAND := rockchip
-PRODUCT_MODEL := Edge2
+PRODUCT_MODEL := A10_3588
 PRODUCT_MANUFACTURER := Namtso
 PRODUCT_AAPT_PREF_CONFIG := mdpi
 
@@ -53,4 +53,4 @@ PRODUCT_PROPERTY_OVERRIDES += ro.config.media_vol_default=12
 
 PRODUCT_PROPERTY_OVERRIDES += service.adb.tcp.port=5555
 BUILD_NUMBER2 := $(shell $(DATE) +%Y%m%d)
-PRODUCT_PROPERTY_OVERRIDES += ro.build.display.id=Edge2-android-13-v$(BUILD_NUMBER2)
+PRODUCT_PROPERTY_OVERRIDES += ro.build.display.id=A10-3588-android-13-v$(BUILD_NUMBER2)
