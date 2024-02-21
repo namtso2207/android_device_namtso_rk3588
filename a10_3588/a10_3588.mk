@@ -39,7 +39,9 @@ PRODUCT_AAPT_PREF_CONFIG := mdpi
 $(shell python device/namtso/rk3588/auto_generator.py preinstall)
 -include device/namtso/rk3588/preinstall/preinstall.mk
 PRODUCT_COPY_FILES += \
-    device/namtso/rk3588/preinstall/preinstall.sh:system/bin/preinstall.sh
+    device/namtso/rk3588/preinstall/preinstall.sh:system/bin/preinstall.sh \
+    device/namtso/rk3588/a10_3588/candump:system/bin/candump \
+    device/namtso/rk3588/a10_3588/cansend:system/bin/cansend
 
 #
 ## add Rockchip properties
