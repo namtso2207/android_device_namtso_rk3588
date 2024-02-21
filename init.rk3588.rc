@@ -78,8 +78,13 @@ on init
     chown root system /dev/cec0
     chmod 0664 /dev/cec0
     chmod 666 /sys/class/rtc/rtc0/bootalarm
-	chmod 666 /sys/class/mcu/mculed
-	chmod 666 /dev/ttysWK*
+    chmod 666 /sys/class/mcu/mculed
+    chmod 666 /dev/ttyWCH0
+    chmod 666 /dev/ttyWCH1
+    chmod 666 /dev/ttyWCH2
+    chmod 666 /dev/ttyWCH3
+    chmod 666 /sys/class/wol/eth0_enable
+    chmod 666 /sys/class/wol/eth1_enable
 
 on early-init
     write /sys/devices/system/cpu/cpufreq/policy0/scaling_governor performance
