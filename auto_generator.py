@@ -7,7 +7,7 @@ templet = """include $(CLEAR_VARS)
 LOCAL_MODULE := %s
 LOCAL_MODULE_CLASS := APPS
 LOCAL_MODULE_PATH := $(TARGET_OUT)/%s
-LOCAL_SRC_FILES := $(LOCAL_MODULE)$(COMMON_ANDROID_PACKAGE_SUFFIX)
+LOCAL_REPLACE_PREBUILT_APK_INSTALLED := $(LOCAL_PATH)/%s.apk
 LOCAL_CERTIFICATE := PRESIGNED
 LOCAL_DEX_PREOPT := false
 LOCAL_MODULE_TAGS := optional
@@ -38,7 +38,7 @@ def main(argv):
                 p = re.compile(r'\S*(?=.apk\b)')
                 found = p.search(file_name)
                 if found:
-                    makefile.write(templet %(found.group(), argv[1]))
+                    makefile.write(templet %(found.group(), argv[1], found.group()))
                     includefile.write('PRODUCT_PACKAGES += %s\n' %found.group())
         makefile.close()
         includefile.close()
