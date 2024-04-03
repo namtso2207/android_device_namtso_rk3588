@@ -41,7 +41,12 @@ $(shell python device/namtso/rk3588/auto_generator.py preinstall)
 PRODUCT_COPY_FILES += \
     device/namtso/rk3588/preinstall/preinstall.sh:system/bin/preinstall.sh \
     device/namtso/rk3588/a10_3588/candump:system/bin/candump \
-    device/namtso/rk3588/a10_3588/cansend:system/bin/cansend
+    device/namtso/rk3588/a10_3588/cansend:system/bin/cansend \
+    device/namtso/rk3588/a10_3588/android_usb_mac_tool/rtunicpg-aarch64-armv8:system/bin/rtunicpg-aarch64-armv8 \
+    device/namtso/rk3588/a10_3588/android_usb_mac_tool/EF8156BG.dat:system/usr/share/android_usb_mac_tool/EF8156BG.dat \
+    device/namtso/rk3588/a10_3588/android_pcie_mac_tool/rtnicpg-aarch64-linux-gnu:system/bin/rtnicpg-aarch64-linux-gnu \
+    device/namtso/rk3588/a10_3588/android_pcie_mac_tool/pgdrv.ko:system/usr/share/android_pcie_mac_tool/pgdrv.ko \
+    device/namtso/rk3588/a10_3588/android_pcie_mac_tool/pgload.sh:system/usr/share/android_pcie_mac_tool/pgload.sh \
 
 #
 ## add Rockchip properties
