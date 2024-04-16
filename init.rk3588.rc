@@ -12,7 +12,7 @@ on property:sys.boot_completed=1
     write /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 0
     write /sys/devices/system/cpu/cpu6/cpufreq/scaling_min_freq 0
 
-    write /sys/devices/system/cpu/cpufreq/policy0/scaling_governor schedutil
+    write /sys/devices/system/cpu/cpufreq/policy0/scaling_governor performance
     write /sys/devices/system/cpu/cpufreq/policy4/scaling_governor schedutil
     write /sys/devices/system/cpu/cpufreq/policy6/scaling_governor schedutil
 
@@ -34,7 +34,7 @@ on charger
     write /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 0
     write /sys/devices/system/cpu/cpu6/cpufreq/scaling_min_freq 0
 
-    write /sys/devices/system/cpu/cpufreq/policy0/scaling_governor schedutil
+    write /sys/devices/system/cpu/cpufreq/policy0/scaling_governor performance
     write /sys/devices/system/cpu/cpufreq/policy4/scaling_governor schedutil
     write /sys/devices/system/cpu/cpufreq/policy6/scaling_governor schedutil
 
