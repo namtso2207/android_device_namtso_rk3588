@@ -51,6 +51,8 @@ PRODUCT_COPY_FILES += \
 #
 ## add Rockchip properties
 #
+PRODUCT_PROPERTY_OVERRIDES += ro.kofficial.version=false
+PRODUCT_PROPERTY_OVERRIDES += ro.kofficial.otaurl=https://dl.namtso.com/products/a10/a10-3588/firmware/android/ota/
 PRODUCT_PROPERTY_OVERRIDES += ro.sf.lcd_density=240
 PRODUCT_PROPERTY_OVERRIDES += ro.wifi.sleep.power.down=true
 PRODUCT_PROPERTY_OVERRIDES += persist.wifi.sleep.delay.ms=0
